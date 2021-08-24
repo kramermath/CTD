@@ -1,0 +1,36 @@
+body {
+    background-color:palegoldenrod;
+}
+
+.title {
+    color: blue;
+    font-size: 40px;
+    
+}
+
+.job-title {
+    background-color: blue;
+    font-weight: bold;
+    color:darkgrey;
+}
+
+#high {
+    color:blue;
+
+}
+
+.contact {
+    color: grey;
+}
+
+.list {
+    color:palegoldenrod;
+    background-color:dimgray;
+
+}
+
+.list a:link {
+
+    color: pink;
+  }
+  
