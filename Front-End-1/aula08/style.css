@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'); 
+
+body {
+    background-color: #131313;
+}
+
+h1 {
+    color: white;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.media-picture {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url('https://sitetarjanerd.com.br/wp-content/uploads/2016/11/Hooligans.png');
+}
+
+.review-score {
+    color: white;
+    background-color: #e6bd09;
+    padding: 12px;
+} 
+
+h2 {
+    color: steelblue;
+}
+
+p {
+    color: #bdbdbd;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: yellow;
+}
