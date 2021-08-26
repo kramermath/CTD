@@ -1,88 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Cálculo IMC</title>
 </head>
+
 <body>
     <h1>Cálculo IMC</h1>
-    
-    <h2>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</h2>
-    
-    <p>O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.<br>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
-    
-    <p><strong>Desenvolvido por: Tatiana Almeida, Juliana Ferrão, Matheus Kramer, Thomas Breno e Carlos Filho. </strong></p>
+
+    <h2>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o
+        peso ideal de cada pessoa.</h2>
+
+    <p>O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado.
+        Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.<br>Quer descobrir seu
+        IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os
+        exemplos e use pontos como separadores.</p>
+
+    <p><strong>Desenvolvido por: Tatiana Almeida, Juliana Ferrão, Matheus Kramer, Thomas Breno e Carlos Filho. </strong>
+    </p>
     <button onclick="calcularImc()">Calcular IMC</button>
 
     <script type="text/javascript">
-        /*
-            Nível I - Refatorando
-            O que pode ser feito para melhorar a legibilidade¹ do código?
 
-            ¹Facilidade de entendimento do algoritimo gerado no código. 
-
-            Nível II - Adicionando novas funcionalidades
-            O usuário com sobrepeso, obsidade e/ou obsidade grave deverão:
-            - Receber uma alerta recomendando uma consulta com nutricionista (Boleano - true ou false);
-                - Caso a resposta seja sim, preencherá com:
-                    - Seu nome;
-                    - Dia da semana que pretende se consultar;
-                    - O horário do dia que pretende se consultar;
-                    - Agradecer o usuário pelo nome e informar o dia e horário da consulta com o Dra. Luana Nagydai.
-                - Caso a resposta seja não:
-                    - Receberá um pedido de agradecimento.
-
-            Nível III - Correção de error 
-            (🍒 do bolo)
-            Recebemos um pedido de alteração da clínica:
-            O usuário com sobrepeso, obsidade e/ou obsidade grave deverão:
-            - Receber uma alerta recomendando uma consulta com nutricionista (Boleano - true ou false);
-                - Caso a resposta seja sim, preencherá com:
-                    - Seu nome;
-                    - Dia da semana que pretende se consultar;
-                    - O horário do dia que pretende se consultar;
-                    (ajuste)
-                    - Confirmar com o usuário se o dia e o horário estão corretos:
-                        Caso a resposta seja sim:
-                        - Segue o fluxo normalmente.
-                    - Caso a resposta seja não:
-                        - Dia da semana que pretende se consultar;
-                        - O horário do dia que pretende se consultar;
-                    (fim do ajuste)
-                    - Agradecer o usuário pelo nome e informar o dia e horário da consulta com o Dra. Luana Nagydai.
-                - Caso a resposta seja não:
-                    - Receberá um pedido de agradecimento.
-
-
-
-                    Podemos declarar o var usuario antes e depois preencher os valores!
-        */
         function calcularImc() {
+
+            var usuario = {
+                nome: prompt('Qual seu nome?'),
+                diaSemana: null,
+                horario: null,
+            }
             var peso = prompt('Qual seu peso?');
             var altura = prompt('Qual sua Altura?');
             var resultadoImc = peso / (altura * altura);
-            var perfilImc = resultadoImc <= 18.5 ? 'MAGREZA' : 
-                            resultadoImc >= 18.5 && resultadoImc <= 24.9 ? 'NORMAL' :
-                            resultadoImc >= 25 && resultadoImc <=29.9 ? 'SOBREPESO' : 
-                            resultadoImc >=30 && resultadoImc <= 39.9 ? 'OBESIDADE':'OBESIDADE GRAVE';
-                            
-            alert(`Seu IMC é iqual a:${resultadoImc} e sua seu perfil é:${perfilImc}`);
-            if (perfilImc == 'SOBREPESO' || 'OBESIDADE' || 'OBESIDADE GRAVE') {
-                if (confirm('Gostaria de agendar uma consulta com um nutricionista?') == true) {
-                    var usuario = {
-                                    nome: input('Qual seu nome?'),
-                                    diaSemana: input('Que dia da semana pretende se consultar?'),
-                                    horario: input('Qual horário pretende se consultar?'),                                    
-                    }
-                    alert(`Obrigado ${usuario.nome}, sua consulta foi agendada com a Dra. Luana Nagydai no dia ${diaSemana} as ${horario}`)
+            var perfilImc = resultadoImc <= 18.5 ? 'MAGREZA' :
+                resultadoImc >= 18.5 && resultadoImc <= 24.9 ? 'NORMAL' :
+                    resultadoImc >= 25 && resultadoImc <= 29.9 ? 'SOBREPESO' :
+                        resultadoImc >= 30 && resultadoImc <= 39.9 ? 'OBESIDADE' : 'OBESIDADE GRAVE';
 
+            function perguntaDados() {
+                usuario.diaSemana = prompt('Que dia da semana pretende se consultar?')
+                usuario.horario = prompt('Qual horário pretende se consultar?')
+            }
+
+            function confirmaDados() {
+                if (confirm(`Você confirma o agendamento no dia ${usuario.diaSemana} as ${usuario.horario}?`)) {
+                    alert(`Obrigado ${usuario.nome}, sua consulta foi agendada com a Dra. Luana Nagydai no dia ${usuario.diaSemana} as ${usuario.horario}`)
                 }
-                else { 
-                    alert(`Obrigado ${usuario.nome}.`) 
-                }   
-             }
+                else {
+                    perguntaDados()
+                    confirmaDados()
+                }
+            }
+            alert(`Seu IMC é igual a:${resultadoImc} e sua seu perfil é:${perfilImc}`);
+            if (resultadoImc >= 25) {
+                if (confirm('Gostaria de agendar uma consulta com um nutricionista?')) {
+                    perguntaDados()
+                    confirmaDados()
+                }
+            }
+            else {
+                alert(`Obrigado ${usuario.nome}.`)
+            }
+
         }
-        
+
     </script>
+
 </body>
+
 </html>
