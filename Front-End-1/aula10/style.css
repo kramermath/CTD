@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.banner {
+    background-image: url('https://wallpaperaccess.com/full/491292.jpg');
+    background-size: cover;
+    height: 720px;
+    width: 1280px;
+    color: white;
+    font-family: 'Roboto';
+    text-align: center;
+    padding: 80px 0px 0px 0px;
+    box-sizing: border-box;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    color:blue;
+    background-color: burlywood;
+    font-weight: bold;
+}
