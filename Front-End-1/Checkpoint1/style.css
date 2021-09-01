@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+
+}
+
+body {
+    height: 720px;
+    width: 1280px;
+    background-image: url(http://proauto.org.br/assets/media/blog/b10df5c2dad5fed62e270b7e188e4e2b.png);
+    background-size:cover;
+    font-family:'Roboto', sans-serif
+}
+
+
+header {
+    padding: 20px 0px;
+    background-color:rgb(224, 196, 35);
+    border-radius: 15px;    
+    text-align: center;
+    width:1120px;
+
+}
+
+main {
+    font-family: 'Bebas Neue', cursive;
+
+    width: 550px;
+    padding: 0 0 0 15px;
+
+}
+
+.video-e-curiosidade {
+    position: absolute;
+    left: 655px;
+    bottom: 360px;
+}
+
+footer {
+    position: absolute;
+    bottom: 5px;
+    padding: 0 0 0 100px;
+}
+
+.texto-footer {
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+}

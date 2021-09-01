@@ -63,7 +63,8 @@
         while (letraDaMusica.indexOf('Mengo') != -1) {
         letraDaMusica = letraDaMusica.replace('Mengo', 'Cruzeiro')           
         }
-        return letraDaMusica}
+        return letraDaMusica
+    }
         
        
     // Item 3 - Função para contar número de caracteres do texto
@@ -72,21 +73,17 @@
     }
 
     // Item 4 - Função para contar quantas palavras existem no texto
-    function ContPalavras (){
-        letraDaMusica()
+    function contPalavras (){
+        return letraDaMusica.trim().split(' ');
+
     }
 
 
     console.log(acharMengo());
     console.log(substituirMengo());
     console.log(contCaracter());
+    console.log(contPalavras());
 
-     
-   var xyz = letraDaMusica.split();
-   console.log(xyz);
-   var abc = xyz.length;
-   console.log(abc);
-    
     </script>
 
 
