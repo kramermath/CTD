@@ -1,0 +1,55 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    position: relative;
+    background-color: rgba(43, 122, 226, 0.219);
+    height: 50px;
+    width: 100%;
+    margin: 15px 0px 15px 0px;
+    text-align: center;    
+}
+
+
+.products {
+    position: relative;
+    width: 100vw;
+    margin-bottom: 50px;
+}
+
+.product {
+    height: 200px;
+    width: 300px;
+    margin: 0px 0px 10px 40px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.photo {
+    height: 150px;
+    width: 250px;
+}
+
+fieldset {
+width: 400px;
+margin-bottom: 20px;
+padding: 10px;
+position: relative;
+left: calc(50% - 200px);
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.adress-form {
+    padding-right: 3px;
+}

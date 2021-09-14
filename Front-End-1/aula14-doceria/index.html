@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Compra de Bolo</title>
+</head>
+
+<body>
+    <header>
+        <!-- Menu superior do site -->
+        <div>
+            <h1>Confeitaria Doces Maravilhosos</h1>
+        </div>
+    </header>
+
+    <div class="products">
+        <!-- Aqui são imagens dos produtos -->
+        <div class="product">
+            <img class="photo" src="https://i.pinimg.com/originals/0b/20/ca/0b20ca94668cbeaac6c24adb416f5a72.png"
+                alt="Bolo">
+            <div>
+                <h3>Bolo com Cobertura</h3>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="photo" src="http://www.depanes.com.br/img/bolos/bolo-formigueiro.png" alt="Bolo">
+            <div>
+                <h3>Bolo Formigueiro</h3>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="photo" src="https://depanes.com.br/img/bolos/bolo-fuba.png" alt="Bolo">
+            <div>
+                <h3>Bolo de Fubá</h3>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="photo" src="https://isacake.files.wordpress.com/2014/11/banner04.png" alt="Bolo">
+            <div>
+                <h3>Bolo de Morango</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <!-- Aqui é o formulário -->
+
+        <form>
+
+            <fieldset class="product-form">
+
+                <legend>Escolha seu Produto</legend>
+
+                <div>
+                    <input type="radio" name="cake-option" id="Cobertura">
+                    <label for="Cobertura">Cobertura</label>
+                    <input type="radio" name="cake-option" id="Formigueiro">
+                    <label for="Formigueiro">Formigueiro</label>
+                    <input type="radio" name="cake-option" id="Fubá">
+                    <label for="Fubá">Fubá</label>
+                    <input type="radio" name="cake-option" id="Morango">
+                    <label for="Morango">Morango</label>
+                </div>
+
+            </fieldset>
+
+            <fieldset class="adress-form"> 
+                <legend>Endereço de Entrega</legend>
+
+                <div>
+                    <label for="name">Seu nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Nome Completo">
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@email.com">
+                </div>
+
+                <div>
+                    <label for="state">Estado:</label>
+                    <select name="state" id="state">
+                        <optgroup>
+                            <option value="saoPaulo">São Paulo</option>
+                            <option value="rioDeJaneiro">Rio de Janeiro</option>
+                        </optgroup>
+                    </select>    
+                </div>
+
+                <div>
+                    <label for="zipcode">CEP:</label>
+                    <input type="text" maxlength="8" name="zipcode" id="zipcode" placeholder="Apenas números">
+                </div>
+                
+                <div>
+                    <label for="housenumber">Nº da casa:</label>
+                    <input type="number" maxlength="10" name="housenumber" id="housenumber">
+                </div>
+                
+
+
+            </fieldset>
+
+            <fieldset class="payment-form">
+                <legend>Método de Pagamento</legend>
+                
+
+            </fieldset>
+
+
+
+
+
+        </form>
+    </div>
+</body>
+
+</html>

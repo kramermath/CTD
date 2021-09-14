@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    
+    <form class="formulario">
+
+        <h1>Cadastro de alunos</h1>
+        
+        <div>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Digite o seu nome">
+        </div>
+
+        <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@email.com">
+        </div>
+
+        <div>
+            <label for="password">Senha:</label>
+            <input type="password" required id="password" name="password">
+        </div>
+
+        <div>
+            <label for="socialNumber">CPF:</label>
+            <input type="number" maxlength="11" name="socialNumber" id="socialNumber">
+        </div>
+
+        <div>
+            <label for="birthDate">Data de nascimento:</label>
+            <input type="date" name="birthDate" id="birthDate">
+        </div>
+
+        <div>
+            <input type="checkbox" checked id="juridical">
+            <label for="juridical">Pessoa Juridica</label>
+        </div>
+
+        <div>
+            <input type="radio" name="option" id="option">
+            <label for="option">Opção 1</label>
+            <input type="radio" name="option" id="option2">
+            <label for="option2">Opção 2</label>
+            <input type="radio" name="option" id="option3">
+            <label for="option3">Opção 3</label>
+        </div> 
+
+        <div>
+            <label for="city">Cidade</label>
+            <select name="city" id="city">
+                <optgroup>
+                    <option value="saoPaulo">São Paulo</option>
+                    <option value="rioDeJaneiro">Rio de Janeiro</option>
+                </optgroup>
+            </select>    
+        </div>
+
+        <div>
+            <label for="bairro">Bairro</label>
+            <input list="bairros" name="bairro" id="bairro">
+            <datalist id="bairros">
+                <option value="Abc"></option>
+                <option value="CDB"></option>
+                <option value="AbSc"></option>
+                <option value="Abuuc"></option>
+            </datalist>
+        </div>
+
+        <div>
+            <label for="comments">Comentários:</label>
+            <div><textarea name="comments" id="comments" cols="30" rows="5"></textarea></div>
+        </div>
+
+        <button class="botao" type="submit">Salvar</button>
+        <button class="botao" type="reset">Cancelar</button>
+    </form>   
+
+</body>
+</html>
