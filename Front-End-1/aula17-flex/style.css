@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    
+    body {
+        background-color: rgb(138, 138, 138);
+    }
+    
+    main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    }
+    
+    .video {
+    height: 225px;
+    width: 250px;
+    }
+    
+    .capa {
+        height: 170px;
+        width: 250px;
+    }
+    
+    .video-titulo {
+        font-size: 24px;
+    }
