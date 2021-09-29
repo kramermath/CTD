@@ -1,0 +1,70 @@
+@keyframes shake {
+    
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        transform: translate(20px);
+    }
+
+    100%{
+        transform: translate(-20px);
+    }
+}
+
+.animation1{
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-size:  100px;
+    text-align: center;
+}
+
+@keyframes rotate {
+    
+    0%{
+        
+    }
+
+    50%{
+        transform: rotate(180deg)
+    }
+
+    100%{
+        transform: rotate(-180deg)
+    }
+}
+
+.animation2{
+
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size:  100px;
+    text-align: center;
+}
+
+@keyframes button1 {
+    
+    0%{
+        
+    }
+
+    50%{
+        transform: background-color:rgb(32, 32, 104)
+    }
+
+    100%{
+        
+    }
+}
+
+.button{
+
+    animation-name: button1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size:  100px;
+    text-align: center;
+}
