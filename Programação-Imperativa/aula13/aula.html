@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 13 - Objetos literais parte I, JSON</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        
+        // 1. Objeto Literal
+
+        var professor = {
+            nome: 'Willian',
+            sobrenome: 'Sant Anna',
+            nomeCompleto: function() {
+                return `${this.nome} ${this.sobrenome}`; 
+            }
+        } 
+
+        console.log(professor.nome); // Willian
+        console.log(professor.sobrenome); // Sant Anna
+        console.log(professor.nomeCompleto()); // Willian Sant Anna
+
+        // 2. JSON (JavaScript Object Notation)
+        // Obs.: Não permite uso de funções.
+        // Documentação: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+
+        var json = JSON.stringify(professor);
+        
+        console.log(json); // {"nome":"Willian","sobrenome":"Sant Anna"}
+        console.log(json.nome); // undefined
+        
+        // 3. Convertendo JSON em Objeto Literal
+        // Documentação: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+
+        var objetoLiteral = JSON.parse(json);
+
+        console.log(objetoLiteral); // {nome: 'Willian', sobrenome: 'Sant Anna'}
+        console.log(objetoLiteral.nome); // Willian
+
+    </script>
+</body>
+</html>
