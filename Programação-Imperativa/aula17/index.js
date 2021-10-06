@@ -1,5 +1,5 @@
 const express = require('express')
-const aplicativo = new express()
+const aplicativo = express()
 
 aplicativo.get('/', function(req, res){
     res.send("a");
